@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +15,8 @@
     <title>Adopte Une Chaussette</title>
   </head>
   <body>
-    <header>
-      <nav class="glass">
+    <header class="glass">
+      <nav>
         <ul>
           <a href="index.html"><img src="assets/favicon.ico" alt="logo" /></a>
 
@@ -66,37 +66,39 @@
         </ul>
       </nav>
     </header>
-
-    <!-- AllMessages -->
     <main>
-      <div id="container1">
-        <img class="AllMessagesImage1" src="persons/DarkSock27.png" />
-        <h3>DarkSock27</h3>
-        <p class="glass">Coucou toi</p>
-        <p class="3points">...</p>
+      <article class="glass">
+        <img src="persons/Albertine.png" alt="Albertine.png">
+        <h2>Ça file avec Albertine</h2>
+        <svg>
+            <path d="M14 7.39286C14 3.31138 10.8646 0 7 0C3.13542 0 0 3.31138 0 7.39286C0 10.9096 2.32847 13.8565 5.44444 14.6009V17.25H3.69444C3.37361 17.25 3.11111 17.5272 3.11111 17.8661V19.9196C3.11111 20.2585 3.37361 20.5357 3.69444 20.5357H5.44444V22.3839C5.44444 22.7228 5.70694 23 6.02778 23H7.97222C8.29306 23 8.55556 22.7228 8.55556 22.3839V20.5357H10.3056C10.6264 20.5357 10.8889 20.2585 10.8889 19.9196V17.8661C10.8889 17.5272 10.6264 17.25 10.3056 17.25H8.55556V14.6009C11.6715 13.8565 14 10.9096 14 7.39286ZM3.11111 7.39286C3.11111 5.12879 4.85625 3.28571 7 3.28571C9.14375 3.28571 10.8889 5.12879 10.8889 7.39286C10.8889 9.65692 9.14375 11.5 7 11.5C4.85625 11.5 3.11111 9.65692 3.11111 7.39286Z" fill="white"/>
+        </svg>
+      </article>
+
+      <div class="userinfos glass">
+        <h2>Usure:</h2>
+        <p>To do</p>
+
+        <h2>Saison:</h2>
+        <p>To do</p>
+
+        <h2>Bio:</h2>
+        <p>To do</p>
       </div>
-      <div id="container2">
-        <img class="AllMessagesImage2" src="persons/Hamile.png" />
-        <h3>Hamile</h3>
-        <p class="glass">Tu connais le mont...</p>
-        <p class="3points">...</p>
+
+      <div class="userpictures">
+        <img src="../persons/Albertine.png" alt="Albertine.png-1" class="pic1">
+        <img src="../persons/Albertine.png" alt="Albertine.png-2" class="pic2">
+        <img src="../persons/Albertine.png" alt="Albertine.png-3" class="pic3">
+        <img src="../persons/Albertine.png" alt="Albertine.png-4" class="pic4">
+        <img src="../persons/Albertine.png" alt="Albertine.png-5" class="pic5">
+        <img src="../persons/Albertine.png" alt="Albertine.png-6" class="pic6">
       </div>
-      <div id="container3">
-        <img class="AllMessagesImage3" src="persons/bobby.png" />
-        <h3>Bobby</h3>
-        <p class="glass">Heyy!!!!</p>
-        <p class="3points">...</p>
-      </div>
-      <div id="container4">
-        <img class="AllMessagesImage4" src="persons/Mathilda.png" />
-        <h3>Mathilda</h3>
-        <p class="glass">Hi here!</p>
-        <p class="3points">...</p>
-      </div>
+      <button class="match glass">Filer avec</button>
+      <button class="ignor glass">Ignorer</button>
     </main>
     <footer class="glass">
       <p class="copyright">&copy; Promodoro 2023</p>
-
       <ul>
         <!--Facebook-->
         <li>
