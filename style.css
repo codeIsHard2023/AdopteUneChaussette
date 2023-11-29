@@ -23,6 +23,8 @@
 
 * {
   font-family: var(--mainFont);
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -30,4 +32,8 @@ body {
 }
 img {
   color: black;
+}
+
+li > a > svg {
+  height: 3rem;
 }
