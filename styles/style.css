@@ -1,0 +1,62 @@
+:root {
+  /*Fonts styles*/
+  --mainFont: "Roboto", sans-serif;
+
+  /*Box model*/
+  --outerBox: 0.5rem; /*for margin equivalent to 8px (16px = 1rem)*/
+  --innerBox: 0.5rem; /* for padding equivalent to 8px*/
+
+  /*Font sizes mobile*/
+  --headOneMobile: 2.25rem;
+  --headTwoMobile: 1.25 rem;
+  --headThreeMobile: 1.25 rem;
+  --headTextMobile: 1rem;
+  /*Font sizes Ipad*/
+  --headOneIpad: 2.5rem;
+  --headTwoIpad: 1.25 rem;
+  --headThreeIpad: 1.25 rem;
+  --headTextIpad: 1.6rem;
+  /*Font sizes Laptop*/
+  --headOneLaptop: 4rem;
+  --headTwoLaptop: 2rem;
+  --headThreeLaptop: 1rem;
+  --headTextLaptop: 1.6rem;
+  /*Font size default*/
+  --textDefault: 1rem;
+
+  /*Colors*/
+  --degrade: linear-gradient(
+    90deg,
+    rgba(173, 43, 117, 1) 28%,
+    rgba(224, 64, 92, 1) 68%,
+    rgba(242, 106, 41, 1) 100%
+  );
+  --colorText: #fff;
+  --colorSvg: #fff;
+}
+
+* {
+  font-family: var(--mainFont);
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--degrade);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+li > a > svg {
+  height: 3rem;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
