@@ -1,0 +1,117 @@
+body {
+	height: 100vh;
+}
+
+
+
+
+
+ul {
+	display: flex;
+	flex-direction: row;
+}
+
+li {
+	width: 50px;
+}
+
+.indexLogo {
+	height: 40px;
+}
+
+a {
+	display: flex;
+	flex-direction: row;
+}
+
+.textMenu {
+	display: none;
+}
+
+svg {
+	width: 48px;
+	margin-right: 0;
+	display: flex;
+	align-items: center;
+}
+
+.messageIcon {
+	width: 48px;
+	padding-top: .8rem;
+	margin-left: .3rem;
+}
+
+.supportIcon {
+	padding-top: .5rem;
+}
+
+/* END NAVBAR */
+
+
+
+main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+section {
+	height: 50%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+h1 {
+	font-size: 2.25em;
+	font-weight: 200;
+	color: white;
+}
+
+input {
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	height: 3vw;
+	text-align: center;
+	padding: 1vw;
+}
+
+
+button {
+	padding: 2vw;
+	margin: 2rem;
+	width: 50%;
+	align-self: center;
+	color: grey;
+	border-radius: 10px;
+	Border: none;
+}
+
+/* FOOTER START */
+
+
+.instagramIcon {
+	padding-top: .2rem;
+	margin-left: .2rem
+}
+
+.twitterIcon {
+	padding-top: .3rem;
+}
+
+label {
+	color: white;
+}

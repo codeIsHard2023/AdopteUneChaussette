@@ -1,0 +1,76 @@
+:root {
+  --mainFont: "Roboto", sans-serif;
+
+  --margin: 0.5rem;
+  --padding: 0.5rem;
+  /*Colors*/
+  --degrade: linear-gradient(90deg,
+      rgba(173, 43, 117, 1) 28%,
+      rgba(224, 64, 92, 1) 68%,
+      rgba(242, 106, 41, 1) 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: var(--mainFont);
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: var(--degrade);
+  background-size: cover;
+  margin: 0;
+
+}
+
+.navGlass {
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+img {
+  color: black;
+}
+
+li>a>svg {
+  height: 3rem;
+}
+
+
+.footerGlass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
