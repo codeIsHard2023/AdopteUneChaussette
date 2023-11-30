@@ -3,8 +3,10 @@
   --mainFont: "Roboto", sans-serif;
 
   /*Box model*/
-  --outerBox: 0.5rem; /*for margin equivalent to 8px (16px = 1rem)*/
-  --innerBox: 0.5rem; /* for padding equivalent to 8px*/
+  --outerBox: 0.5rem;
+  /*for margin equivalent to 8px (16px = 1rem)*/
+  --innerBox: 0.5rem;
+  /* for padding equivalent to 8px*/
 
   /*Font sizes mobile*/
   --headOneMobile: 2.25rem;
@@ -25,12 +27,10 @@
   --textDefault: 1rem;
 
   /*Colors*/
-  --degrade: linear-gradient(
-    90deg,
-    rgba(173, 43, 117, 1) 28%,
-    rgba(224, 64, 92, 1) 68%,
-    rgba(242, 106, 41, 1) 100%
-  );
+  --degrade: linear-gradient(90deg,
+      rgba(173, 43, 117, 1) 28%,
+      rgba(224, 64, 92, 1) 68%,
+      rgba(242, 106, 41, 1) 100%);
   --colorText: #fff;
   --colorSvg: #fff;
 }
@@ -48,11 +48,16 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-li > a > svg {
+li>a>svg {
   height: 3rem;
 }
+
 .glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -61,6 +66,7 @@ li > a > svg {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .navGlass {
   height: 3.5rem;
   width: 100%;
@@ -68,7 +74,7 @@ li > a > svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+
   top: 0;
   border-radius: 0 0 16px 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -76,13 +82,14 @@ li > a > svg {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
 
 img {
   color: black;
 }
 
-li > a > svg {
+li>a>svg {
   height: 3rem;
 }
 
@@ -91,7 +98,7 @@ li > a > svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   border-radius: 16px 16px 0 0;

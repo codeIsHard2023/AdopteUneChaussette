@@ -1,7 +1,3 @@
-body {
-  height: 100vh;
-}
-
 ul {
   display: flex;
   flex-direction: row;
@@ -31,9 +27,11 @@ svg {
   align-items: center;
   fill: var(--colorText);
 }
+
 .copyright {
   color: var(--colorText);
 }
+
 .messageIcon {
   width: 48px;
   padding-top: 0.8rem;
@@ -86,10 +84,12 @@ input {
   text-align: center;
   padding: 1vw;
 }
+
 #demandText {
   width: 80%;
   height: 8rem;
 }
+
 button {
   padding: 2vw;
   margin: 2rem;
