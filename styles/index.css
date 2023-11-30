@@ -1,0 +1,42 @@
+/*Mobile version without carousel*/
+
+main {
+  display: flex;
+  justify-content: center;
+}
+.slide-right,
+.slide-left {
+  display: none;
+}
+.cards-container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--outerBox) 0;
+}
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+.card-image > img {
+  width: 80%;
+  border-radius: 0.56rem;
+}
+
+.info-card {
+  color: var(--colorText);
+  display: flex;
+}
+
+.info-card > h2 {
+  font-size: var(--headTwoMobile);
+  margin-right: 1rem;
+}
