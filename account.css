@@ -1,8 +1,31 @@
+/* STYLE GENERAL */
+
 :root {
+    /*Fonts styles*/
     --mainFont: "Roboto", sans-serif;
   
-    --margin: 0.5rem;
-    --padding: 0.5rem;
+    /*Box model*/
+    --outerBox: 0.5rem; /*for margin equivalent to 8px (16px = 1rem)*/
+    --innerBox: 0.5rem; /* for padding equivalent to 8px*/
+  
+    /*Font sizes mobile*/
+    --headOneMobile: 2.25rem;
+    --headTwoMobile: 1.25 rem;
+    --headThreeMobile: 1.25 rem;
+    --headTextMobile: 1rem;
+    /*Font sizes Ipad*/
+    --headOneIpad: 2.5rem;
+    --headTwoIpad: 1.25 rem;
+    --headThreeIpad: 1.25 rem;
+    --headTextIpad: 1.6rem;
+    /*Font sizes Laptop*/
+    --headOneLaptop: 4rem;
+    --headTwoLaptop: 2rem;
+    --headThreeLaptop: 1rem;
+    --headTextLaptop: 1.6rem;
+    /*Font size default*/
+    --textDefault: 1rem;
+  
     /*Colors*/
     --degrade: linear-gradient(
       90deg,
@@ -10,9 +33,30 @@
       rgba(224, 64, 92, 1) 68%,
       rgba(242, 106, 41, 1) 100%
     );
+    --colorText: #fff;
+    --colorSvg: #fff;
   }
   
-  .glass{
+  * {
+    font-family: var(--mainFont);
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--degrade);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+  li > a > svg {
+    height: 3rem;
+  }
+
+  .glass {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -20,42 +64,87 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
-  
-  * {
-    font-family: var(--mainFont);
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  body {
-    margin: 0;
-    background: var(--degrade);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-  }
 
-  img {
-    color: black;
+  .navGlass {
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
   }
   
   li > a > svg {
     height: 3rem;
   }
 
-nav {
-    width: 100%;
-}
-
-nav ul {
+  .footerGlass {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-nav ul li {
-    list-style-type: none;
-}
+/* NAV PART */
+
+ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+li {
+    width: 50px;
+  }
+  
+.indexLogo {
+    height: 40px;
+  }
+  
+a {
+    display: flex;
+    flex-direction: row;
+  }
+  
+.textMenu {
+    display: none;
+  }
+  
+svg {
+    width: 48px;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    fill: var(--colorSvg);
+  }
+
+.copyright {
+    color: var(--colorText);
+  }
+
+.messageIcon {
+    width: 48px;
+    padding-top: 0.8rem;
+    margin-left: 0.3rem;
+  }
+  
+.supportIcon {
+    padding-top: 0.5rem;
+  }
+
+/* USER PART */
 
 .userPictures {
     display: flex;
@@ -139,26 +228,63 @@ nav ul li {
 }
 
 .userNickname {
-    color: aliceblue;
-    margin: 3rem auto;
+    color: var(--colorText);
+    margin: 3rem auto 1rem;
     text-align: center;
 }
 
 .userInformations {
-    color: aliceblue;
+    color: var(--colorText);
     padding: 2rem;
-    margin: 3rem auto;
-    width: 60vw;
+    margin: 1rem auto 3rem;
+    width: 80vw;
 }
 
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+form {
+    margin: 0 0 1rem 0;
 }
 
-footer ul {
+.userIdentity {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
 }
+
+.biography {
+    display: flex;
+    flex-direction: column;
+}
+
+#firstName {
+    margin-bottom: 1rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+#lastName {
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+#bio {
+    height: 4rem;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+}
+
+/* FOOTER PART */
+
+.instagramIcon {
+    padding-top: 0.2rem;
+    margin-left: 0.2rem;
+  }
+  
+.twitterIcon {
+    padding-top: 0.3rem;
+  }
+  
+label {
+    color: var(--colorText);
+  }
