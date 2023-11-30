@@ -1,120 +1,116 @@
 body {
-	height: 100vh;
+  height: 100vh;
 }
 
-
-
-
-
 ul {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-	width: 50px;
+  width: 50px;
 }
 
 .indexLogo {
-	height: 40px;
+  height: 40px;
 }
 
 a {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .textMenu {
-	display: none;
+  display: none;
 }
 
 svg {
-	width: 48px;
-	margin-right: 0;
-	display: flex;
-	align-items: center;
+  width: 48px;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  fill: var(--colorText);
 }
-
+.copyright {
+  color: var(--colorText);
+}
 .messageIcon {
-	width: 48px;
-	padding-top: .8rem;
-	margin-left: .3rem;
+  width: 48px;
+  padding-top: 0.8rem;
+  margin-left: 0.3rem;
 }
 
 .supportIcon {
-	padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 /* END NAVBAR */
 
-
-
 main {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
-	height: 50%;
-	width: 70%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
 }
 
 h1 {
-	font-size: 2.25em;
-	font-weight: 200;
-	color: white;
+  font-size: 2.25em;
+  font-weight: 200;
+  color: white;
 }
 
 input {
-	margin-top: 2vw;
-	margin-bottom: 2vw;
-	height: 3vw;
-	text-align: center;
-	padding: 1vw;
+  width: 80%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  height: 3vh;
+  text-align: center;
+  padding: 1vw;
 }
-
-
+#demandText {
+  width: 80%;
+  height: 8rem;
+}
 button {
-	padding: 2vw;
-	margin: 2rem;
-	width: 50%;
-	align-self: center;
-	color: grey;
-	border-radius: 10px;
-	Border: none;
+  padding: 2vw;
+  margin: 2rem;
+  width: 50%;
+  align-self: center;
+  color: var(--colorText);
+  border-radius: 10px;
+  border: none;
 }
-
-
-
 
 /* FOOTER START */
 
-
 .instagramIcon {
-	padding-top: .2rem;
-	margin-left: .2rem
+  padding-top: 0.2rem;
+  margin-left: 0.2rem;
 }
 
 .twitterIcon {
-	padding-top: .3rem;
+  padding-top: 0.3rem;
 }
 
 label {
-	color: white;
+  color: white;
 }
