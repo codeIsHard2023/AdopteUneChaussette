@@ -9,7 +9,7 @@ main {
   display: none;
 }
 .cards-container {
-  margin: 2rem auto;
+  margin: calc(var(--outerBox) * 4) auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,5 +38,30 @@ main {
 
 .info-card > h2 {
   font-size: var(--headTwoMobile);
-  margin-right: 1rem;
+  margin-right: calc(var(--outerBox) * 2);
+}
+/* @media screen (min-width: 320px) and (max-width: 768px) {
+} */
+@media screen and (min-width: 1024px) {
+  main {
+    padding: calc(var(--innerBox));
+  }
+  .slide-right,
+  .slide-left {
+    display: unset;
+  }
+  .cards-container {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: var(--outerBox) 0; */
+  }
 }
