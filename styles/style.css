@@ -60,17 +60,3 @@ li > a > svg {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-/* nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-ul li {
-  display: flex;
-} */
