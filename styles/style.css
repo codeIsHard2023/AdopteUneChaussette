@@ -60,3 +60,48 @@ li > a > svg {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h1 {
+    font-size: var(--headOneMobile);
+  }
+  h2 {
+    font-size: var(--headTwoMobile);
+  }
+  h3 {
+    font-size: var(--headThreeMobile);
+  }
+  p {
+    font-size: var(--headTextMobile);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: var(--headOneIpad);
+  }
+  h2 {
+    font-size: var(--headTwoIpad);
+  }
+  h3 {
+    font-size: var(--headThreeIpad);
+  }
+  p {
+    font-size: var(--headTextIpad);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: var(--headOneLaptop);
+  }
+  h2 {
+    font-size: var(--headTwoLaptop);
+  }
+  h3 {
+    font-size: var(--headThreeLaptop);
+  }
+  p {
+    font-size: var(--headTextLaptop);
+  }
+}
