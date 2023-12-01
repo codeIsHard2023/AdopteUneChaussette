@@ -29,10 +29,11 @@ header {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: auto;
 }
@@ -41,11 +42,7 @@ footer li {
     width: 30px;
     height: 30px;
     margin: 0 10px;
-    justify-content: flex-end;
-}
-
-.copyright {
-    margin: 0;
+    justify-content: center;
 }
 
 ul {
@@ -59,23 +56,27 @@ li {
     padding: 0;
 }
 
+svg {
+    fill: #fff;
+}
 
 @media screen and (max-width: 600px) {
     header {
-        height: 120px;
+        height: 100px;
     }
 
     .welcome-section {
         margin-top: 10px;
         font-size: 18px;
+
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     header {
         height: 150px;
     }
