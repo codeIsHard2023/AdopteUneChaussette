@@ -3,8 +3,10 @@
   --mainFont: "Roboto", sans-serif;
 
   /*Box model*/
-  --outerBox: 0.5rem; /*for margin equivalent to 8px (16px = 1rem)*/
-  --innerBox: 0.5rem; /* for padding equivalent to 8px*/
+  --outerBox: 0.5rem;
+  /*for margin equivalent to 8px (16px = 1rem)*/
+  --innerBox: 0.5rem;
+  /* for padding equivalent to 8px*/
 
   /*Font sizes mobile*/
   --headOneMobile: 2.25rem;
@@ -48,11 +50,16 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 li > a > svg {
   height: 3rem;
 }
+
 .glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
