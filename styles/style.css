@@ -557,14 +557,6 @@ li > a > svg {
   width: 100%;
 }
 
-/* login.css */
-
-
-
-body {
-  margin: 0;
-}
-
 .findpaire{
   color: white;
   display: flex;
@@ -602,10 +594,12 @@ body {
 .login-container input::placeholder{
   color: white;
 }
+
 .login-container input:focus{
   color: white;
   outline: white;
 }
+
 .login-container button{
   padding: 2vw;
   margin: 2rem;
@@ -634,11 +628,6 @@ body {
   fill: #fff;
   margin: 0 10px;
 }
-
-/* perso.css */
-
-
-
 
 ul {
 	display: flex;
@@ -767,9 +756,6 @@ main {
   color: white;
 }
 
-
-
-
  .userGender{
   display: flex;
   flex-direction: row;
@@ -797,8 +783,6 @@ main {
   padding-left: 10%;
   padding-right: 10%;
 }
-
-
 
  .userSeasons select{
   color: #fff;
@@ -889,8 +873,6 @@ main {
 	background-size: cover;
 }
 
-
-
 .containerInfos {
 	display: flex;
 	flex-direction: column;
@@ -913,8 +895,6 @@ p {
 
 }
 
-
-
 .match {
 	padding: 1rem 1rem 1rem 1rem;
 }
@@ -924,10 +904,7 @@ p {
 
 }
 
-
 @media screen and (max-width: 600px) {
-
-
 
 	.photoAlbertine {
 		scale: 0.6;
@@ -950,8 +927,6 @@ p {
   .userinfos p{
     margin: 1rem;
   }
-
-
 
 	.userpictures {
 		margin-top: .5rem;
@@ -1012,9 +987,6 @@ p {
 		grid-area: 1 / 4 / 3 / 5;
 	}
 
-
-	
-
 	.userinfos {
     display: flex;
     flex-direction: column;
@@ -1042,15 +1014,6 @@ p {
 	.ignor {
     padding: 1rem 1rem 1rem 1rem;
 	}
-}
-
-
-/* register.css */
-
-
-
-body {
-  margin: 0;
 }
 
 .findpaire{
@@ -1147,8 +1110,6 @@ a {
   display: none;
 }
 
-
-
 .copyright {
   color: var(--colorText);
   margin: 1rem;
@@ -1163,8 +1124,6 @@ a {
 .supportIcon {
   padding-top: 0.5rem;
 }
-
-
 
 section {
   height: 65%;
