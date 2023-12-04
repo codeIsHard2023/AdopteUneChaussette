@@ -129,6 +129,11 @@
   .slide-left {
     display: flex;
   }
+  .btn-slide {
+    width: 100%;
+    opacity: 1;
+    cursor: pointer;
+  }
   .slider-1 {
     width: 100%;
     overflow: hidden;
@@ -152,7 +157,7 @@
     width: 33%;
     height: 100%;
     flex-shrink: 0;
-    animation: slider-left 15s infinite ease-in-out;
+    /* animation: slider-left 15s forwards ease-in-out; */
     /* animation: slider-right 5s ease-in-out; */
   }
   /* .slider-1 .animation-right {
@@ -164,7 +169,12 @@
   .card {
     /* height: 100%; */
     flex-shrink: 0;
-    animation: slider-left 15s infinite ease-in-out;
+    /* transform: translateX(100%); */
+    /* animation: slider-left 15s forwards ease-in-out; */
+  }
+  .animation-left {
+    /* transform: translateX(-100%) 15s backwards ease-in-out; */
+    transform: translateX(-100%);
   }
   .card-image {
     height: 60%;
