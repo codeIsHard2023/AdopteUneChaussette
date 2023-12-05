@@ -727,7 +727,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 10% 10% 1rem;
   width: 100%;
 }
 
@@ -740,15 +740,13 @@ main {
   background: none;
   border: none;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 1rem 10%;
 }
 
 .userIdentity input::placeholder {
   color: #fff;
   text-align: left;
   font-size: 1rem;
-
 }
 
 .userIdentity input:focus{
@@ -758,8 +756,16 @@ main {
 
  .userGender{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: left;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.genderList {
+  display: flex;
+  flex-direction: row;
 }
 
  .userUsed{
@@ -771,8 +777,16 @@ main {
   padding-right: 10%;
 }
 
+#wear {
+  padding: 0.5rem 0;
+}
+
 .userUsed select{
   color: #fff;
+}
+
+.userUsed option {
+  color: black;
 }
 
  .userSeasons{
@@ -784,8 +798,16 @@ main {
   padding-right: 10%;
 }
 
+#season {
+  padding: 0.5rem 0;
+}
+
  .userSeasons select{
   color: #fff;
+}
+
+.userSeasons option {
+  color: black;
 }
 
  .biography{
@@ -795,6 +817,19 @@ main {
   width: 100%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+#bio {
+  padding: 1rem 0;
+  resize: none;
+  color: #fff;
+}
+
+.biography textarea::placeholder {
+  color: #fff;
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 2rem;
 }
 
 .saveUserInfo{
