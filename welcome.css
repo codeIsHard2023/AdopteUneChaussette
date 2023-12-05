@@ -3,10 +3,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 header {
-    margin-top: 2em;
+    margin-top: 0;
     display: flex;
     padding: 20px;
     justify-content: center;
@@ -19,64 +33,98 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 10%;
+
 }
 
 .welcome-section {
     align-items: center;
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: center;
     color: white;
+    font-size: 20px;
 }
 
 .welcome-message {
     text-align: center;
     margin-bottom: 15%;
     color: white;
+
 }
 
-footer {
+.bottom {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin: 0;
+    font-size: 1em;
 }
 
-footer li {
+.bottom li {
     width: 30px;
     height: 30px;
-    margin: 0 10px;
+    margin-right: 10px;
+
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
     display: inline-block;
     padding: 0;
     object-fit: contain;
-    aspect-ratio: 3/2 width: 100%;
-
+    aspect-ratio: 3/2 width: 30px;
+    height: 30px;
+    margin: 0 10px
 }
 
 svg {
     fill: #fff;
+    width: 150%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
     header {
         height: 80px;
     }
 
     .welcome-section {
         margin-top: 10px;
-        font-size: 16px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .welcome-message {
+        font-size: 15px;
+    }
+
+    fonter {
+        font-size: 10px;
+    }
+
+    li {
+        margin: 0 10px;
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     header {
         height: 120px;
+    }
+
+    .welcome-section {
+        margin-top: 200px;
+        font-size: 1.7em;
+    }
+
+    .welcome-message {
+        font-size: 1.2em;
     }
 
     footer {
