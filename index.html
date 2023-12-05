@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/support.css" />
     <link rel="icon" href="assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,44 +70,33 @@
     </header>
 
     <!-- Main page  -->
-    <main>
-      <div class="slider-container">
-        <!-- <div class="slide-left">
-          <a class="slider-icon" href="#"
-            ><img
-              class="slider-icon"
-              src="assets/slide-left.svg"
-              alt="slide-persons-cards-left"
-            />
-          </a>
-        </div> --> 
-        <div class="slide-left">
-          <button type="button" class="btn-slide btn-slide-left"><img
-              class="slider-icon"
-              src="assets/slide-left.svg"
-              alt="slide-persons-cards-left"
-            />
-        </button>
-        </div>
-        <div class="container slider-1">
-          <div class="card ">
+    <div class="carousel-container">
+      <i id="left" class="fa-solid fa-angle-left" alt="button-slide-right"></i>
+      <ul class="carousel">
+        <li class="card">
+          <a href="user/Hamile.html">
             <div class="card-image">
               <img src="persons/Hamile.png" alt="first-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Hamile - 37 ans</h2>
               <img
-                class="gender-icon"
+                class="gender__icon"
                 src="assets/female-icon.svg"
                 alt="female-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Bobby.html">
             <div class="card-image">
               <img src="persons/Bobby.png" alt="second-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Bobby - 49 ans</h2>
               <img
                 class="gender-icon"
@@ -117,12 +104,17 @@
                 alt="male-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Bob.html">
             <div class="card-image">
               <img src="persons/Bob.png" alt="third-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>BOB - 45 ans</h2>
               <img
                 class="gender-icon"
@@ -130,12 +122,17 @@
                 alt="male-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Albertine.html">
             <div class="card-image">
               <img src="persons/Albertine.png" alt="firth-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Albertine - 25 ans</h2>
               <img
                 class="gender-icon"
@@ -143,12 +140,17 @@
                 alt="female-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Choupette.html">
             <div class="card-image">
               <img src="persons/Choupette.png" alt="fifth-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Choupette - 33 ans</h2>
               <img
                 class="gender-icon"
@@ -156,12 +158,17 @@
                 alt="male-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Mathilda.html">
             <div class="card-image">
               <img src="persons/Mathilda.png" alt="sixth-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Mathilda - 37 ans</h2>
               <img
                 class="gender-icon"
@@ -169,12 +176,17 @@
                 alt="female-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/DarkSock27.html">
             <div class="card-image">
               <img src="persons/DarkSock27.png" alt="seventh-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>DarkSock27 - 57 ans</h2>
               <img
                 class="gender-icon"
@@ -182,12 +194,17 @@
                 alt="male-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
+            </div>
+          </a>
+        </li>
+        <li class="card">
+          <a href="user/Emile.html">
             <div class="card-image">
               <img src="persons/Emile.png" alt="seventh-profile" />
             </div>
-            <div class="info-card">
+            <div class="card-info">
               <h2>Emile - 55 ans</h2>
               <img
                 class="gender-icon"
@@ -195,32 +212,18 @@
                 alt="male-icon"
               />
             </div>
-          </div>
-          <div class="card animation-left animation-right"">
-            <div class="card-image">
-              <img src="persons/Hamile.png" alt="first-profile" />
+            <div class="person-info">
+              <p>J'aime les promenades en claquettes-chaussettes !!</p>
             </div>
-            <div class="info-card">
-              <h2>Hamile - 37 ans</h2>
-              <img
-                class="gender-icon"
-                src="assets/female-icon.svg"
-                alt="female-icon"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="slide-right">
-          <a class="slider-icon" href="#"
-            ><img
-              class="slider-icon"
-              src="assets/slide-right.svg"
-              alt="slide-persons-cards-right"
-            />
           </a>
-        </div>
-      </div>
-    </main>
+        </li>
+      </ul>
+      <i
+        id="right"
+        class="fa-solid fa-angle-right"
+        alt="button-slide-right"
+      ></i>
+    </div>
     <!-- FOOTER SECTION -->
     <footer class="footerGlass">
       <p class="copyright">&copy; Promodoro 2023</p>
