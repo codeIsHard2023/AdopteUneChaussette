@@ -1063,12 +1063,15 @@ aside img {
 /*Start styling : Page Accueil with carousel*/
 
 .carousel-container {
-  max-width: 90%;
-  width: 85%;
+  /* max-width: 90%; */
+  width: 90vw;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
-.carousel-container i {
+.carousel-container .fa-angle-left,
+.fa-angle-right {
   height: 30px;
   width: 30px;
   background-color: rgba(245, 245, 245, 0.445);
@@ -1083,24 +1086,23 @@ aside img {
   transform: translateY(-50%);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.carousel-container i:first-child {
+.carousel-container .fa-angle-left {
   left: -32px;
 }
-.carousel-container i:last-child {
+.carousel-container .fa-angle-right {
   right: -32px;
 }
 .carousel-container .carousel {
-  height: 370px;
-  /* height: 100%; */
-  padding-top: 1.5rem;
+  height: 400px;
+  width: 100%;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 0.8rem);
-  gap: 1.2rem;
+  gap: 2rem;
+  align-content: center;
+  align-items: center;
   overflow: hidden;
   scroll-behavior: smooth;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .carousel :where(.card, .card-image, .card-info, .person-info) {
   display: flex;
@@ -1108,19 +1110,20 @@ aside img {
   align-items: center;
 }
 .carousel .card {
-  height: 322px;
-  /* height: 80%; */
+  height: 350px;
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
   flex-direction: column;
-  padding-bottom: 1rem;
   cursor: pointer;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
 }
 li.card:hover {
   transform: scale(1.05);
@@ -1151,7 +1154,7 @@ li.card:hover {
 }
 .person-info p {
   color: var(--colorText);
-  font-size: var(--textDefault);
+  font-size: calc(var(--textDefault) / 1.05);
   text-align: center;
   padding: var(--innerBox);
   margin: 0;
@@ -1167,7 +1170,6 @@ li.card:hover {
     width: 80vw;
   }
   .carousel-container .carousel {
-    /* grid-auto-columns: calc((100% / 1.1) - 0.3rem); */
     grid-auto-columns: 100%;
   }
 }
