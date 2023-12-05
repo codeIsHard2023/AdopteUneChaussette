@@ -147,8 +147,10 @@ li > a > svg {
 }
 
 /* Mobile version without carousel */
-
-/* index.css */
+#fileInput{
+  display: none;
+}
+  /* index.css */
 .slider-container {
   display: flex;
   justify-content: center;
