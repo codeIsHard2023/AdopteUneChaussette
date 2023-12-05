@@ -1,5 +1,3 @@
-
-
 :root {
   /*Fonts styles*/
   --mainFont: "Roboto", sans-serif;
@@ -29,12 +27,10 @@
   --textDefault: 1rem;
 
   /*Colors*/
-  --degrade: linear-gradient(
-    90deg,
-    rgba(173, 43, 117, 1) 28%,
-    rgba(224, 64, 92, 1) 68%,
-    rgba(242, 106, 41, 1) 100%
-  );
+  --degrade: linear-gradient(90deg,
+      rgba(173, 43, 117, 1) 28%,
+      rgba(224, 64, 92, 1) 68%,
+      rgba(242, 106, 41, 1) 100%);
   --colorText: #fff;
   --colorSvg: #fff;
 }
@@ -73,12 +69,15 @@ body {
   h1 {
     font-size: var(--headOneMobile);
   }
+
   h2 {
     font-size: var(--headTwoMobile);
   }
+
   h3 {
     font-size: var(--headThreeMobile);
   }
+
   p {
     font-size: var(--headTextMobile);
   }
@@ -88,12 +87,15 @@ body {
   h1 {
     font-size: var(--headOneIpad);
   }
+
   h2 {
     font-size: var(--headTwoIpad);
   }
+
   h3 {
     font-size: var(--headThreeIpad);
   }
+
   p {
     font-size: var(--headTextIpad);
   }
@@ -121,7 +123,7 @@ img {
   color: black;
 }
 
-li > a > svg {
+li>a>svg {
   height: 3rem;
   width: 48px;
   margin-right: 0;
@@ -156,10 +158,12 @@ li > a > svg {
   width: 100%;
   height: 70%;
 }
+
 .slide-right,
 .slide-left {
   display: none;
 }
+
 .container {
   width: 100%;
   height: 100%;
@@ -169,6 +173,7 @@ li > a > svg {
   align-items: center;
   justify-content: center;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -177,11 +182,13 @@ li > a > svg {
   margin: var(--outerBox) 0;
   flex-shrink: 0;
 }
+
 .card-image {
   display: flex;
   justify-content: center;
 }
-.card-image > img {
+
+.card-image>img {
   width: 80%;
   border-radius: 0.56rem;
 }
@@ -191,25 +198,25 @@ li > a > svg {
   display: flex;
 }
 
-.info-card > h2 {
+.info-card>h2 {
   font-size: var(--headTwoMobile);
   margin-right: calc(var(--outerBox) * 2);
 }
 
-.lastmessages{
+.lastmessages {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   margin: auto;
 }
 
-.lastmessages article{
+.lastmessages article {
   margin: 1rem;
   display: flex;
   align-items: center;
 }
 
-.lastmessages article img{
+.lastmessages article img {
   border-radius: 100%;
   border: 3px solid;
   border-color: white;
@@ -217,13 +224,16 @@ li > a > svg {
   margin-right: 1rem;
   display: flex;
 }
-.message{
+
+.message {
   justify-content: center;
 }
-.message h3{
+
+.message h3 {
   margin: .5rem;
 }
- .message p{
+
+.message p {
   display: flex;
   justify-content: flex-start;
   padding: .5rem 3rem 1rem .5rem;
@@ -236,6 +246,7 @@ li > a > svg {
   .slider-1 {
     overflow: hidden;
   }
+
   .slider-1 .card {
     width: 70%;
     height: 40%;
@@ -248,6 +259,7 @@ li > a > svg {
     flex-shrink: 0;
     animation: slider-top 15s infinite ease-in-out;
   }
+
   .card-image {
     height: 80%;
     width: auto;
@@ -262,38 +274,47 @@ li > a > svg {
 */
 
   @keyframes slider-top {
+
     0%,
     7.5% {
       transform: translateY(0);
     }
+
     12.5%,
     20% {
       transform: translateY(-100%);
     }
+
     25%,
     32.5% {
       transform: translateY(-200%);
     }
+
     37.5%,
     45% {
       transform: translateY(-300%);
     }
+
     50%,
     57.5% {
       transform: translateY(-400%);
     }
+
     62.5%,
     70% {
       transform: translateY(-500%);
     }
+
     75%,
     82.5% {
       transform: translateY(-600%);
     }
+
     87.5%,
     95% {
       transform: translateY(-700%);
     }
+
     100% {
       transform: translateY(-800%);
     }
@@ -310,14 +331,17 @@ li > a > svg {
     flex-direction: row;
     justify-content: center;
   }
+
   .slide-right,
   .slide-left {
     display: flex;
   }
+
   .slider-1 {
     width: 100%;
     overflow: hidden;
   }
+
   .container {
     height: 70%;
     width: 70%;
@@ -328,6 +352,7 @@ li > a > svg {
     align-items: center;
     justify-content: center;
   }
+
   .slider-1 .card {
     margin: 0;
     display: flex;
@@ -340,6 +365,7 @@ li > a > svg {
     animation: slider-left 15s infinite ease-in-out;
     /* animation: slider-right 5s ease-in-out; */
   }
+
   /* .slider-1 .animation-right {
     animation: slider-right 15s infinite ease-in-out;
   } */
@@ -351,14 +377,17 @@ li > a > svg {
     flex-shrink: 0;
     animation: slider-left 15s infinite ease-in-out;
   }
+
   .card-image {
     height: 60%;
     width: 90%;
     object-fit: cover;
   }
+
   .card-image img {
     object-fit: cover;
   }
+
   .info-card {
     font-size: var(--headTwoIpad);
   }
@@ -371,75 +400,94 @@ li > a > svg {
 */
 
   @keyframes slider-left {
+
     0%,
     7.5% {
       transform: translateX(0);
     }
+
     12.5%,
     20% {
       transform: translateX(-100%);
     }
+
     25%,
     32.5% {
       transform: translateX(-200%);
     }
+
     37.5%,
     45% {
       transform: translateX(-300%);
     }
+
     50%,
     57.5% {
       transform: translateX(-400%);
     }
+
     62.5%,
     70% {
       transform: translateX(-500%);
     }
+
     75%,
     82.5% {
       transform: translateX(-600%);
     }
+
     87.5%,
     95% {
       transform: translateX(-700%);
     }
+
     100% {
       transform: translateX(-800%);
     }
   }
+
   @keyframes slider-right {
+
     0%,
     7.5% {
       transform: translateX(0);
     }
+
     12.5%,
     20% {
       transform: translateX(100%);
     }
+
     25%,
     32.5% {
       transform: translateX(200%);
     }
+
     37.5%,
     45% {
       transform: translateX(300%);
     }
+
     50%,
     57.5% {
       transform: translateX(400%);
     }
+
     62.5%,
     70% {
       transform: translateX(500%);
     }
+
     75%,
     82.5% {
       transform: translateX(600%);
     }
+
     87.5%,
     95% {
       transform: translateX(700%);
     }
+
     100% {
       transform: translateX(800%);
     }
@@ -448,28 +496,31 @@ li > a > svg {
   h1 {
     font-size: var(--headOneLaptop);
   }
+
   h2 {
     font-size: var(--headTwoLaptop);
   }
+
   h3 {
     font-size: var(--headThreeLaptop);
   }
+
   p {
     font-size: var(--headTextLaptop);
   }
 
   .containerInfos {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 70%;
-    
-	}
+
+  }
 
 
-	.userpictures {
+  .userpictures {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -477,87 +528,87 @@ li > a > svg {
     grid-row-gap: 0px;
     height: 10rem;
     width: 10rem;
-	}
+  }
 
-	 .pic1 {
-		background-color: red;
-		border-radius: 5px;
-		border: 3px solid white;
-		background-size: cover;
-		grid-area: 1 / 1 / 2 / 2;
+  .pic1 {
+    background-color: red;
+    border-radius: 5px;
+    border: 3px solid white;
+    background-size: cover;
+    grid-area: 1 / 1 / 2 / 2;
     width: 100%;
-	}
+  }
 
-	.pic2 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area:  1 / 2 / 2 / 3;
+  .pic2 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 1 / 2 / 2 / 3;
     width: 100%;
-	}
+  }
 
-	.pic3 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 2 / 1 / 4 / 3;
+  .pic3 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 2 / 1 / 4 / 3;
     width: 100%;
-	}
+  }
 
-	.pic4 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 4 / 1 / 5 / 2;
+  .pic4 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 4 / 1 / 5 / 2;
     width: 100%;
-	}
+  }
 
-	.pic5 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 4 / 2 / 5 / 3;
+  .pic5 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 4 / 2 / 5 / 3;
     width: 100%;
-	}
+  }
 
-	.pic6 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 1 / 3 / 5 / 5;
+  .pic6 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 1 / 3 / 5 / 5;
     width: 100%;
-	}
+  }
 
-	.userinfos {
+  .userinfos {
     display: flex;
     flex-direction: column;
-		width: 100%;
-		height: 100%;
+    width: 100%;
+    height: 100%;
     padding: 1rem;
     margin: 2rem;
-	}
+  }
 
-  .userinfos h3{
+  .userinfos h3 {
     margin: 1rem;
   }
 
-  .userinfos p{
+  .userinfos p {
     margin: 1rem;
   }
 }
 
-.userButton{
+.userButton {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.findpaire{
+.findpaire {
   color: white;
   display: flex;
   flex-direction: row;
@@ -565,12 +616,12 @@ li > a > svg {
   align-items: baseline;
 }
 
-.findpaire svg{
+.findpaire svg {
   height: 4vh;
   width: 2vh;
 }
 
-.login-container{
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -579,11 +630,12 @@ li > a > svg {
   margin-left: 10vw;
   color: white;
 }
-.login-container h1{
+
+.login-container h1 {
   text-align: center;
 }
 
-.login-container input{
+.login-container input {
   margin-top: 2vw;
   margin-bottom: 2vw;
   height: 3vh;
@@ -591,16 +643,16 @@ li > a > svg {
   padding: 1vw;
 }
 
-.login-container input::placeholder{
+.login-container input::placeholder {
   color: white;
 }
 
-.login-container input:focus{
+.login-container input:focus {
   color: white;
   outline: white;
 }
 
-.login-container button{
+.login-container button {
   padding: 2vw;
   margin: 2rem;
   width: 50%;
@@ -609,12 +661,13 @@ li > a > svg {
 
 }
 
-.firstRegister{
+.firstRegister {
   display: flex;
   justify-content: center;
   color: white;
   margin: 3vw;
 }
+
 .footerNoCopyright {
   color: #fff;
   text-align: center;
@@ -630,51 +683,51 @@ li > a > svg {
 }
 
 ul {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-	width: 50px;
+  width: 50px;
 }
 
 .indexLogo {
-	height: 40px;
+  height: 40px;
 }
 
 a {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .textMenu {
-	display: none;
+  display: none;
 }
 
 
 .copyright {
-	color: var(--colorText);
+  color: var(--colorText);
 }
 
 .messageIcon {
-	width: 48px;
-	padding-top: 0.8rem;
-	margin-left: 0.3rem;
+  width: 48px;
+  padding-top: 0.8rem;
+  margin-left: 0.3rem;
 }
 
 .supportIcon {
-	padding-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 
 
 main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 5%;
-  height: 100%;
+  height: 100vh;
 }
 
 
@@ -689,7 +742,7 @@ main {
   color: #fff;
 }
 
-.cafile img{
+.cafile img {
   height: 6rem;
   border-radius: 100%;
   margin: 1rem;
@@ -700,23 +753,23 @@ main {
 
 
 .photoAlbertine {
-	Margin-top: 5%;
-	height: 10vh;
-	width: 10vh;
-	border-radius: 50%;
-	border: 3px solid white;
+  Margin-top: 5%;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  border: 3px solid white;
 }
 
 .info-card h2 {
-	font-size: 1.25rem;
-	margin-top: 0;
-	margin-bottom: 2rem;
-	color: var(--colorText);
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--colorText);
 
 }
 
 
- .userInformations{
+.userInformations {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -732,7 +785,8 @@ main {
 }
 
 .userIdentity label {
-  text-align: center; /* Align label text to the left */
+  text-align: center;
+  /* Align label text to the left */
 }
 
 .userIdentity input {
@@ -751,18 +805,18 @@ main {
 
 }
 
-.userIdentity input:focus{
+.userIdentity input:focus {
   outline: none;
   color: white;
 }
 
- .userGender{
+.userGender {
   display: flex;
   flex-direction: row;
   text-align: left;
 }
 
- .userUsed{
+.userUsed {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -771,11 +825,11 @@ main {
   padding-right: 10%;
 }
 
-.userUsed select{
+.userUsed select {
   color: #fff;
 }
 
- .userSeasons{
+.userSeasons {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -784,11 +838,11 @@ main {
   padding-right: 10%;
 }
 
- .userSeasons select{
+.userSeasons select {
   color: #fff;
 }
 
- .biography{
+.biography {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -797,12 +851,12 @@ main {
   padding-right: 10%;
 }
 
-.saveUserInfo{
+.saveUserInfo {
   text-align: center;
 }
 
 
-.userProfilPicture{
+.userProfilPicture {
   border-radius: 100%;
   border: 2px solid white;
   margin: 2rem;
@@ -820,203 +874,204 @@ main {
   gap: 5px;
 }
 
-.mypic1 { 
-  grid-area: 1 / 1 / 2 / 2; 
+.mypic1 {
+  grid-area: 1 / 1 / 2 / 2;
   background-color: red;
   background-image: url('/persons/Paul.png');
-	border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
-	background-size: cover;
+  background-size: cover;
 }
 
-.mypic2 { 
-  grid-area: 1 / 2 / 2 / 3; 
+.mypic2 {
+  grid-area: 1 / 2 / 2 / 3;
   background-color: red;
   background-image: url('/persons/Paul.png');
-	border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
-	background-size: cover;
+  background-size: cover;
 }
 
 .mypic3 {
-   grid-area: 2 / 1 / 4 / 3; 
-   background-color: red;
-   background-image: url('/persons/Paul.png');
-   border-radius: 5px;
-   border: 2px solid white;
-   background-size: cover;
+  grid-area: 2 / 1 / 4 / 3;
+  background-color: red;
+  background-image: url('/persons/Paul.png');
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
 }
 
-.mypic4 { 
-  grid-area: 4 / 1 / 5 / 2; 
+.mypic4 {
+  grid-area: 4 / 1 / 5 / 2;
   background-color: red;
   background-image: url('/persons/Paul.png');
-	border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
-	background-size: cover;
+  background-size: cover;
 }
 
-.mypic5 { 
-  grid-area: 4 / 2 / 5 / 3; 
+.mypic5 {
+  grid-area: 4 / 2 / 5 / 3;
   background-color: red;
   background-image: url('/persons/Paul.png');
-	border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
-	background-size: cover;
+  background-size: cover;
 }
-.mypic6 { 
-  grid-area: 1 / 3 / 5 / 5; 
+
+.mypic6 {
+  grid-area: 1 / 3 / 5 / 5;
   background-color: red;
   background-image: url('/persons/Paul.png');
-	border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
-	background-size: cover;
+  background-size: cover;
 }
 
 .containerInfos {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 70%;
 }
 
 h3 {
-	font-size: 1rem;
-	line-height: .75rem;
-	color: var(--colorText)
+  font-size: 1rem;
+  line-height: .75rem;
+  color: var(--colorText)
 }
 
 p {
-	line-height: .8rem;
-	font-size: 1rem;
-	color: var(--colorText);
+  line-height: .8rem;
+  font-size: 1rem;
+  color: var(--colorText);
 
 }
 
 .match {
-	padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .ignor {
-	padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 
 }
 
 @media screen and (max-width: 600px) {
 
-	.photoAlbertine {
-		scale: 0.6;
-	}
+  .photoAlbertine {
+    scale: 0.6;
+  }
 
-	.userinfos {
+  .userinfos {
     display: flex;
     flex-direction: column;
-		margin: 2rem;
-		height: 100%;
-		width: 90%;
-		line-height: 1rem;
+    margin: 2rem;
+    height: 100%;
+    width: 90%;
+    line-height: 1rem;
     padding: 1rem;
-	}
+  }
 
-  .userinfos h3{
+  .userinfos h3 {
     margin: 1rem;
   }
 
-  .userinfos p{
+  .userinfos p {
     margin: 1rem;
   }
 
-	.userpictures {
-		margin-top: .5rem;
-		display: grid;
+  .userpictures {
+    margin-top: .5rem;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 5px;
-		grid-row-gap: 5px;
-		height: 10rem;
-		width: 15rem;
-	}
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    height: 10rem;
+    width: 15rem;
+  }
 
-	.pic1 {
+  .pic1 {
     background-color: red;
-		border-radius: 5px;
-		border: 3px solid white;
-		background-size: cover;
-		grid-area: 1 / 1 / 3 / 2;
-	}
+    border-radius: 5px;
+    border: 3px solid white;
+    background-size: cover;
+    grid-area: 1 / 1 / 3 / 2;
+  }
 
-	.pic2 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 1 / 2 / 2 / 3;
-	}
+  .pic2 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 1 / 2 / 2 / 3;
+  }
 
-	.pic3 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 2 / 2 / 3 / 3;
-	}
+  .pic3 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 2 / 2 / 3 / 3;
+  }
 
-	.pic4 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 1 / 3 / 2 / 4;
-	}
+  .pic4 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 1 / 3 / 2 / 4;
+  }
 
-	.pic5 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
+  .pic5 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
     grid-area: 2 / 3 / 3 / 4;
-	}
+  }
 
-	.pic6 {
-		background-color: red;
-		border-radius: 5px;
-		border: 5px solid white;
-		background-size: cover;
-		grid-area: 1 / 4 / 3 / 5;
-	}
+  .pic6 {
+    background-color: red;
+    border-radius: 5px;
+    border: 5px solid white;
+    background-size: cover;
+    grid-area: 1 / 4 / 3 / 5;
+  }
 
-	.userinfos {
+  .userinfos {
     display: flex;
     flex-direction: column;
-		margin-top: 1rem;
-		height: 100%;
-		width: 70%;
-		line-height: 1rem;
-		margin: 2rem;
+    margin-top: 1rem;
+    height: 100%;
+    width: 70%;
+    line-height: 1rem;
+    margin: 2rem;
     padding: 1rem;
-	}
+  }
 
-  .userinfos h3{
+  .userinfos h3 {
     margin: 1rem;
   }
 
-  .userinfos p{
+  .userinfos p {
     margin: 1rem;
   }
 
 
-	.match {
-		padding: 1rem 1rem 1rem 1rem
-	}
+  .match {
+    padding: 1rem 1rem 1rem 1rem
+  }
 
-	.ignor {
+  .ignor {
     padding: 1rem 1rem 1rem 1rem;
-	}
+  }
 }
 
-.findpaire{
+.findpaire {
   color: white;
   display: flex;
   flex-direction: row;
@@ -1024,12 +1079,12 @@ p {
   align-items: baseline;
 }
 
-.findpaire svg{
+.findpaire svg {
   height: 4vh;
   width: 2vh;
 }
 
-.login-container{
+.login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1038,11 +1093,12 @@ p {
   margin-left: 10vw;
   color: white;
 }
-.login-container h1{
+
+.login-container h1 {
   text-align: center;
 }
 
-.login-container input{
+.login-container input {
   margin-top: 2vw;
   margin-bottom: 2vw;
   height: 3vh;
@@ -1050,14 +1106,16 @@ p {
   padding: 1vw;
 }
 
-.login-container input::placeholder{
+.login-container input::placeholder {
   color: white;
 }
-.login-container input:focus{
+
+.login-container input:focus {
   color: white;
   outline: white;
 }
-.login-container button{
+
+.login-container button {
   padding: 2vw;
   margin: 2rem;
   width: 50%;
@@ -1066,12 +1124,13 @@ p {
 
 }
 
-.firstRegister{
+.firstRegister {
   display: flex;
   justify-content: center;
   color: white;
   margin: 3vw;
 }
+
 .footerNoCopyright {
   color: #fff;
   text-align: center;
@@ -1271,13 +1330,13 @@ label {
   flex-grow: 1;
 }
 
-.conversation img{
+.conversation img {
   border-radius: 100%;
   border: 2px solid white;
   height: 10vw;
 }
 
-.conversation .username{
+.conversation .username {
   font-size: 3rem;
 }
 
