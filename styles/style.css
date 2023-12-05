@@ -570,7 +570,7 @@ li > a > svg {
   width: 2vh;
 }
 
-.login-container{
+.form-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -579,11 +579,11 @@ li > a > svg {
   margin-left: 10vw;
   color: white;
 }
-.login-container h1{
+.form-container h1{
   text-align: center;
 }
 
-.login-container input{
+.form-container input{
   margin-top: 2vw;
   margin-bottom: 2vw;
   height: 3vh;
@@ -591,16 +591,16 @@ li > a > svg {
   padding: 1vw;
 }
 
-.login-container input::placeholder{
+.form-container input::placeholder{
   color: white;
 }
 
-.login-container input:focus{
+.form-container input:focus{
   color: white;
   outline: white;
 }
 
-.login-container button{
+.form-container button{
   padding: 2vw;
   margin: 2rem;
   width: 50%;
@@ -1029,7 +1029,7 @@ p {
   width: 2vh;
 }
 
-.login-container{
+.form-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1038,11 +1038,11 @@ p {
   margin-left: 10vw;
   color: white;
 }
-.login-container h1{
+.form-container h1{
   text-align: center;
 }
 
-.login-container input{
+.form-container input{
   margin-top: 2vw;
   margin-bottom: 2vw;
   height: 3vh;
@@ -1050,20 +1050,36 @@ p {
   padding: 1vw;
 }
 
-.login-container input::placeholder{
+.form-container input::placeholder{
   color: white;
 }
-.login-container input:focus{
+.form-container input:focus{
   color: white;
   outline: white;
 }
-.login-container button{
+
+.form-container textarea{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  padding: 1vw;
+  width: 90%;
+}
+
+.form-container textarea::placeholder{
+  color: white;
+}
+.form-container textarea:focus{
+  color: white;
+  outline: white;
+}
+
+.form-container button{
   padding: 2vw;
   margin: 2rem;
   width: 50%;
   align-self: center;
   color: white;
-
 }
 
 .firstRegister{

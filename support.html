@@ -76,23 +76,27 @@
         <h1 class="contact">Contactez Nous</h1>
 
         <!-- Formulaire de contact -->
-        <form class="contactform">
-          <label for="eMail">Adresse E-mail :</label>
-          <input class="glass" type="email" id="eMail" name="eMail" />
-
-          <label for="demandObject">Objet de votre demande</label>
+        <form class="form-container ">
+          <h1>CONNEXION</h1>
+          <label for="mail">E-mail</label>
           <input
-            class="glass"
             type="text"
-            id="demandObject"
-            name="demandObject"
+            name="mail"
+            id="mail"
+            class="glass"
           />
-
-          <label for="demandtext">Votre demande : </label>
-          <textarea class="glass" id="demandText" name="demandText"></textarea>
+          <div class="form-container-input"></div>
+          <label for="object">Objet de votre demande</label>
+          <input
+            type="object"
+            name="object"
+            id="object"
+            class="glass"
+          />
+          <label for="support">Exprimez vous en quelques mots</label>
+          <textarea name="support" id="support" cols="60" rows="10" class="glass"></textarea>
+          <button class="connect glass">Envoyer</button>
         </form>
-
-        <button class="glass">Envoyer</button>
       </section>
     </main>
 
