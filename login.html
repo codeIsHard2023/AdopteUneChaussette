@@ -116,7 +116,7 @@
           class="glass"
         />
         <div class="login-container-input"></div>
-        <label for="password">Mot de passe</label>
+        <label for="password">Mot de passe </label>
         <input
           type="password"
           name="password"
@@ -124,7 +124,9 @@
           placeholder="Mot de passe"
           class="glass"
         />
-        <button class="connect glass">Se connecter</button>
+        <button type="button" class="show-password-button glass" onclick="togglePasswordVisibility()">Afficher</button>
+        <p id="errorMessage"></p>
+        <button type="button" class="connect glass" onclick="login()">Se connecter</button>
       </form>
       <a href="register.html" class="firstRegister"
         >Pas encore inscrit ? Inscrit-toi ici</a
