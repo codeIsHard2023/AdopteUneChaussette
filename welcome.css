@@ -1,11 +1,9 @@
 body {
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
 }
-
 
 header {
     margin-top: 0;
@@ -22,12 +20,23 @@ main {
     align-items: center;
     justify-content: center;
     padding-top: 10%;
+}
 
+.picture {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.picturePaul {
+    border-radius: 50%;
+    max-width: 60%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .welcome-section {
     align-items: center;
-    margin-top: 15%;
+    margin-top: 0;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -37,22 +46,21 @@ main {
     text-align: center;
     margin-bottom: 15%;
     color: white;
-
 }
 
-/* .bottom {
+.bottom {
     text-align: center;
     padding: 20px;
     margin: 0;
     font-size: 1em;
+    z-index: 100;
 }
 
 .bottom li {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-
-} */
+}
 
 ul {
     list-style: none;
@@ -67,20 +75,25 @@ li {
     display: inline-block;
     padding: 0;
     object-fit: contain;
-    aspect-ratio: 3/2 width: 30px;
+    aspect-ratio: 3/2;
+
     height: 30px;
-    margin: 0 10px
+
 }
 
 svg {
     fill: #fff;
     width: 100%;
+    height: 100%;
 }
 
 @media screen and (min-width: 600px) {
     header {
         height: 80px;
+        margin-top: 2em;
     }
+
+
 
     .welcome-section {
         margin-top: 10px;
@@ -106,8 +119,9 @@ svg {
         height: 120px;
     }
 
+
     .welcome-section {
-        margin-top: 200px;
+
         font-size: 1.7em;
     }
 
