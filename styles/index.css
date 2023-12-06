@@ -129,6 +129,11 @@ li.card:hover {
   object-fit: cover;
   border-radius: 1rem;
 }
+.card svg {
+  fill: rgba(255, 255, 255, 0.334);
+  height: 2rem;
+  width: 2rem;
+}
 
 .card-info {
   color: var(--colorText);
