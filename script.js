@@ -1,9 +1,9 @@
 const carousel = document.querySelector(".carousel")
 const arrowBtns = document.querySelectorAll(".carousel-container i");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const firstCardHeight = carousel.querySelector(".card").offsetHeight;
+const firstCardWidth = carousel.querySelector("li").offsetWidth;
+// const firstCardHeight = carousel.querySelector("a").offsetHeight;
 
-//Add event listener for the arrow button left and right 
+//Add event listener for the arrow button left and right ==> working initial code
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         // console.log(btn.id);
@@ -11,18 +11,33 @@ arrowBtns.forEach(btn => {
     })
 });
 
-// Add event listener for the arrow button up and down 
+
+// Add event listener for the arrow button left-up and right-down 
+
+// function scroll (x) {
+// if (x.matches){
 // arrowBtns.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//         // console.log(btn.id);
-//         carousel.scrollTop += btn.id === "up" ? -firstCardHeight : firstCardHeight;
-//     })
-// });
+//     btn.addEventListener("click", () => {     
+//      // console.log(btn.id);
+//     carousel.scrollTop += btn.id === "left" ? -firstCardHeight : firstCardHeight;
+//     })})}
+// else {
+//     arrowBtns.forEach(btn => {
+//         btn.addEventListener("click", () => {     
+//          // console.log(btn.id);
+//      carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+//      })       
+//  })};
+// }
+// let x = window.matchMedia("(max-width: 600px)")
+// scroll(x)
 
+
+// //Get the number of cards that can fit in the carousel at once
+// let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth)
 const carouselChildren = [...carousel.children]
+let cardPerView = carousel.offsetWidth / firstCardWidth
 
-//Get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth)
 
 //Insert copies of the last few cards to beginning of carousel for infinite scrolling
 carouselChildren.slice(-cardPerView).reverse().forEach( card => {
