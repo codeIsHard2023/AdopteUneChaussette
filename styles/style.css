@@ -1173,8 +1173,8 @@ li.card:hover {
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
   .carousel-container {
-    width: 70vw;
-    max-height: 100%;
+    max-width: 60vw;
+    max-height: 100svh;
     display: flex;
     justify-content: center;
     position: relative;
@@ -1187,7 +1187,7 @@ li.card:hover {
     grid-auto-columns: 100%;
     justify-items: center;
     gap: 1rem;
-    overflow: hidden;
+    overflow-y: hidden;
   }
   .carousel-container .fa-angle-left,
   .fa-angle-right {
