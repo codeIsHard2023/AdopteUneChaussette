@@ -1,0 +1,224 @@
+.myAccount {
+  height: auto;
+}
+.userInformations {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 2rem;
+}
+.userNickname {
+  font-size: 2.5rem;
+  margin: 0 0 2rem 0;
+}
+.userIdentity {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10% 10% 1rem;
+  width: 100%;
+}
+
+.userIdentity label {
+  text-align: center;
+}
+
+.userIdentity input {
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 1rem 10%;
+}
+
+.userIdentity input::placeholder {
+  color: #fff;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.userIdentity input:focus {
+  outline: solid rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.biography textarea:focus {
+  outline: solid rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.userGender {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.genderList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userUsed {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#wear {
+  padding: 0.5rem 0;
+}
+
+.userUsed select {
+  color: #fff;
+}
+
+.userUsed option {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px;
+}
+
+.userSeasons {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.userUsed label,
+.userSeasons label,
+.biography label {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+#season {
+  padding: 0.5rem 0;
+}
+
+.userSeasons select {
+  color: #fff;
+}
+
+.userSeasons option {
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.biography {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#bio {
+  padding: 1rem 0;
+  resize: none;
+  color: #fff;
+}
+
+.biography textarea {
+  height: 5rem;
+}
+
+.biography textarea::placeholder {
+  color: #fff;
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.saveUserInfo {
+  text-align: center;
+}
+
+.userProfilPicture {
+  border-radius: 100%;
+  border: 2px solid white;
+  margin: 2rem;
+  height: 10rem;
+}
+
+.userGalleryPictures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 20rem;
+  width: 20rem;
+  gap: 5px;
+  margin-bottom: 2rem;
+}
+#fileInput {
+  display: none;
+}
+
+.mypic1 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}
+
+.mypic2 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}
+
+.mypic3 {
+  grid-area: 2 / 1 / 4 / 3;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}
+
+.mypic4 {
+  grid-area: 4 / 1 / 5 / 2;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}
+
+.mypic5 {
+  grid-area: 4 / 2 / 5 / 3;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}
+.mypic6 {
+  grid-area: 1 / 3 / 5 / 5;
+  background-color: red;
+  background-image: url("/persons/Paul.png");
+  border-radius: 5px;
+  border: 2px solid white;
+  background-size: cover;
+}

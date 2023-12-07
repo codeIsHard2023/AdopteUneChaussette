@@ -4,6 +4,7 @@
 .testimony {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 0 0 1rem;
 }
 
@@ -11,7 +12,8 @@
   line-height: normal;
 }
 .testimony p:last-child {
-  margin: 2.5rem 0 0 0;
+  /* text-align: center; */
+  margin: 4rem 0 2rem 0;
   font-size: 2.1rem;
 }
 .testimony-title {
@@ -22,7 +24,7 @@
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 100;
-  margin: 0;
+  margin: 2rem 0;
 }
 .testimony-1,
 .testimony-2 {
