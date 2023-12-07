@@ -87,6 +87,12 @@ body {
   p {
     font-size: var(--headTextMobile);
   }
+  .otherMessages{
+    display: none;
+  }
+
+  .user-description{
+    display: none;
 
   label {
     font-size: var(--headLabelMobile)
@@ -111,6 +117,11 @@ body {
     font-size: var(--headTextIpad);
   }
 
+  .otherMessages{
+    display: none;
+  }
+  .user-description{
+    display: none;
   label {
     font-size: var(--headLabeIpad);
   }
@@ -240,12 +251,234 @@ li > a > svg {
 
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+  .slider-1 {
+    overflow: hidden;
+  }
+  .slider-1 .card {
+    width: 70%;
+    height: 40%;
+    z-index: -1;
+    margin: calc((--outerBox));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    animation: slider-top 15s infinite ease-in-out;
+  }
+  .card-image {
+    height: 80%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  /* 
+   5% par transition (*8) = 40% pour transitions
+
+   reste divisé par nb de pauses
+   60(%) / 8 = 7.5% par pause
+*/
+
+  @keyframes slider-top {
+    0%,
+    7.5% {
+      transform: translateY(0);
+    }
+    12.5%,
+    20% {
+      transform: translateY(-100%);
+    }
+    25%,
+    32.5% {
+      transform: translateY(-200%);
+    }
+    37.5%,
+    45% {
+      transform: translateY(-300%);
+    }
+    50%,
+    57.5% {
+      transform: translateY(-400%);
+    }
+    62.5%,
+    70% {
+      transform: translateY(-500%);
+    }
+    75%,
+    82.5% {
+      transform: translateY(-600%);
+    }
+    87.5%,
+    95% {
+      transform: translateY(-700%);
+    }
+    100% {
+      transform: translateY(-800%);
+    }
+  }
+
+  .user-description{
+    display: none;
+  }
   /*to be added*/
 }
 
 /* Laptop/Desktop version */
 
 @media screen and (min-width: 1024px) {
+  main {
+    padding: calc(var(--innerBox));
+    flex-direction: row;
+    justify-content: center;
+  }
+  .slide-right,
+  .slide-left {
+    display: flex;
+  }
+  .slider-1 {
+    width: 100%;
+    overflow: hidden;
+  }
+  .container {
+    height: 70%;
+    width: 70%;
+    margin-left: calc(var(--outerBox) * 6);
+    margin-right: calc(var(--outerBox) * 6);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-1 .card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    flex-shrink: 0;
+    animation: slider-left 15s infinite ease-in-out;
+    /* animation: slider-right 5s ease-in-out; */
+  }
+  /* .slider-1 .animation-right {
+    animation: slider-right 15s infinite ease-in-out;
+  } */
+  /* .animation-left {
+    animation: slider-left 15s infinite ease-in-out;
+  } */
+  .card {
+    /* height: 100%; */
+    flex-shrink: 0;
+    animation: slider-left 15s infinite ease-in-out;
+  }
+  .card-image {
+    height: 60%;
+    width: 90%;
+    object-fit: cover;
+  }
+  .card-image img {
+    object-fit: cover;
+  }
+  .info-card {
+    font-size: var(--headTwoIpad);
+  }
+
+    /* 
+    5% par transition (*8) = 40% pour transitions
+
+    reste / par nb de pauses
+    60(%) / 8 = 7.5% par pause
+  */
+
+  @keyframes slider-left {
+    0%,
+    7.5% {
+      transform: translateX(0);
+    }
+    12.5%,
+    20% {
+      transform: translateX(-100%);
+    }
+    25%,
+    32.5% {
+      transform: translateX(-200%);
+    }
+    37.5%,
+    45% {
+      transform: translateX(-300%);
+    }
+    50%,
+    57.5% {
+      transform: translateX(-400%);
+    }
+    62.5%,
+    70% {
+      transform: translateX(-500%);
+    }
+    75%,
+    82.5% {
+      transform: translateX(-600%);
+    }
+    87.5%,
+    95% {
+      transform: translateX(-700%);
+    }
+    100% {
+      transform: translateX(-800%);
+    }
+  }
+  @keyframes slider-right {
+    0%,
+    7.5% {
+      transform: translateX(0);
+    }
+    12.5%,
+    20% {
+      transform: translateX(100%);
+    }
+    25%,
+    32.5% {
+      transform: translateX(200%);
+    }
+    37.5%,
+    45% {
+      transform: translateX(300%);
+    }
+    50%,
+    57.5% {
+      transform: translateX(400%);
+    }
+    62.5%,
+    70% {
+      transform: translateX(500%);
+    }
+    75%,
+    82.5% {
+      transform: translateX(600%);
+    }
+    87.5%,
+    95% {
+      transform: translateX(700%);
+    }
+    100% {
+      transform: translateX(800%);
+    }
+  }
+
+  h1 {
+    font-size: var(--headOneLaptop);
+  }
+  h2 {
+    font-size: var(--headTwoLaptop);
+  }
+  h3 {
+    font-size: var(--headThreeLaptop);
+  }
+  p {
+    font-size: var(--headTextLaptop);
+  }
+  
   .containerInfos {
     display: flex;
     flex-direction: row;
@@ -335,6 +568,46 @@ li > a > svg {
   .userinfos p {
     margin: 1rem;
   }
+  .otherMessages {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .otherMessages h1 {
+    margin-top: 3.5rem;
+    padding: .5rem;
+  }
+  
+  .otherMessages article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .otherMessages article img {
+    border-radius: 50px;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .user-description {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .user-description img {
+    border-radius: 10px;
+  }
+
+
 }
 
 .userButton {
@@ -1219,12 +1492,6 @@ label {
   flex-direction: row;
 }
 
-.otherMessages {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  text-align: center;
-}
 
 .otherMessages h1 {
   margin-top: 3.5rem;
@@ -1276,7 +1543,7 @@ label {
 .conversation img {
   border-radius: 100%;
   border: 2px solid white;
-  height: 10vw;
+  height: 8rem;
 }
 
 .conversation .username {
@@ -1293,16 +1560,25 @@ label {
   margin: 1rem;
 }
 
+
+
 .usermessage img,
 .mymessage img {
-  height: 3rem;
+  height: 5rem;
   border-radius: 100%;
   margin: 1rem;
 }
 
-.timestamp {
+.usermessage .timestamp {
   margin: 0;
   text-align: right;
+  font-size: 10px;
+}
+
+.mymessage .timestamp {
+  margin: 0;
+  text-align: right;
+  font-size: 10px;
 }
 
 .usermessage .sended-message,
@@ -1325,6 +1601,7 @@ aside {
 aside img {
   border-radius: 10px;
 }
+
 
 .user-description {
   display: flex;
@@ -1602,3 +1879,4 @@ li.card:hover {
   }
 }  */
 /*End styling : Page Accueil with carousel*/
+}}
