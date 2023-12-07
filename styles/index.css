@@ -1,0 +1,235 @@
+/*Start styling : Page Accueil with carousel*/
+
+/*Testimony section*/
+.testimony {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 1rem;
+}
+
+.testimony p {
+  line-height: normal;
+}
+.testimony p:last-child {
+  margin: 2.5rem 0 0 0;
+  font-size: 2.1rem;
+}
+.testimony-title {
+  width: 18rem;
+  margin-top: 1rem;
+}
+.testimony-title h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  margin: 0;
+}
+.testimony-1,
+.testimony-2 {
+  margin-top: 1rem;
+}
+.testimony-1 p:first-child,
+.testimony-2 p:first-child {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 0.5rem 0;
+}
+.testimony-1 p:last-child,
+.testimony-2 p:last-child {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  font-weight: 100;
+  margin: 0;
+  padding: 1rem;
+  width: 20.8rem;
+  border-radius: 1.1875rem;
+  border: 1px solid #8986865a;
+  background: linear-gradient(
+    153deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+}
+
+/*CAROUSEL styling */
+
+.carousel-container {
+  width: 85vw;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-container .fa-angle-left,
+.fa-angle-right {
+  height: 30px;
+  width: 30px;
+  /* background-color: rgba(245, 245, 245, 0.445);
+    color: rgb(255, 255, 255); */
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); */
+}
+.carousel-container .fa-angle-left {
+  left: -50px;
+}
+.carousel-container .fa-angle-right {
+  right: -40px;
+}
+.carousel-container .carousel {
+  height: 400px;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((90% / 3) - 1.45rem);
+  gap: 1.5rem;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+}
+.carousel :where(.card, .card-image, .card-info, .person-info) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  height: 350px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  flex-direction: column;
+  cursor: pointer;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+li.card:hover {
+  transform: scale(1.05);
+}
+.card .card-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.card svg {
+  fill: rgba(255, 255, 255, 0.334);
+  height: 2rem;
+  width: 2rem;
+}
+
+.card-info {
+  color: var(--colorText);
+  margin-bottom: 0;
+}
+
+.card-info > h2 {
+  margin-right: 1rem;
+  font-family: var(--mainFont);
+  font-size: var(--headTwoIpad);
+}
+.carousel a {
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.person-info p {
+  color: var(--colorText);
+  font-size: calc(var(--textDefault) / 1.05);
+  text-align: center;
+  padding: var(--innerBox);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .testimony {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .testimony-title {
+    width: 30rem;
+    margin-top: 1rem;
+  }
+  .testimony h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .carousel-container .carousel {
+    grid-auto-columns: calc((95% / 2) - 0.75rem);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimony-container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .carousel-container {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+  }
+  .carousel-container .carousel {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0rem;
+    overflow: hidden;
+  }
+  .carousel .card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .carousel-container .fa-angle-left,
+  .fa-angle-right {
+    height: 30px;
+    width: 30px;
+    /* background-color: rgba(245, 245, 245, 0.445);
+      color: rgb(255, 255, 255); */
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); */
+  }
+  .carousel-container .fa-angle-left {
+    left: -55px;
+    top: 50%;
+  }
+  .carousel-container .fa-angle-right {
+    right: -40px;
+    top: 50%;
+  }
+}
+/*End styling : Page Accueil with carousel*/
