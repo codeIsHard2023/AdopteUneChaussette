@@ -1,28 +1,42 @@
 
-// slideRight.addEventListener("click", function (event) {
-//     card.classList.toggle() = ".animation-right"
-//   });
+
+const usernames = ["user1", "user2", "user3"];
+const passwords = ["mdp1", "mdp2", "mdp3"];
 
 
-function openModal(clickedElement) {
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("modalImage");
+document.addEventListener('DOMContentLoaded', () => {
+    const userGalleryPictures = document.querySelectorAll('.myPic');
   
-    modal.style.display = "flex";
+    userGalleryPictures.forEach((pic) => {
+      pic.addEventListener('click', () => {
+        userGalleryPictures.forEach((p) => p.classList.remove('selected'));
+        pic.classList.add('selected');
+        document.getElementById('fileInput').click();
+      });
+    });
   
-    // Récupère le style de fond directement depuis le CSS de l'élément cliqué
-    const backgroundImage = getComputedStyle(clickedElement).backgroundImage;
-    modalImg.style.backgroundImage = backgroundImage;
+    document.getElementById('fileInput').addEventListener('change', handleFileChange);
+  });
+  
+  function handleFileChange() {
+    const fileInput = document.getElementById('fileInput');
+    const userGalleryPictures = document.querySelectorAll('.myPic');
+  
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+  
+      reader.onload = (e) => {
+        userGalleryPictures.forEach((pic) => {
+          if (pic.classList.contains('selected')) {
+            pic.style.backgroundImage = `url('${e.target.result}')`;
+            pic.classList.remove('selected');
+          }
+        });
+      };
+  
+      reader.readAsDataURL(fileInput.files[0]);
+    }
   }
-  
-  function closeModal() {
-    const modal = document.getElementById("myModal");
-  
-    modal.style.display = "none";
-  }
-  
-  
-  
   
   
   
@@ -69,35 +83,41 @@ const infiteScroll = () => {
     }
 }
 carousel.addEventListener("scroll", infiteScroll)
-
 //Development of the carousel for index.html : End
 
 
 
-//Development of like feature with maintain of it into cookies : Start
-// Set the initial color
-// const initialColor = "#ffffff55";
-// const heart = document.getElementById("heart");
-// console.log(heart)
-// heart.style.fill = initialColor;
-    
-// // Add a click event listener to toggle between initial color and a new color
-// heart.addEventListener("click", function () {
-  
-//   console.log(heart)
-//   const newColor = "#d11414cc";
-//   console.log(newColor)
-//   const currentColor = heart.style.fill;
-//   console.log(currentColor)
-// // If the current color is the initial color, change to ##d11414cc
-//     if (currentColor === initialColor) {
-//         heart.style.fill = "newColor";
-//         console.log(newColor)
-//     }
-//     else{
-//         heart.style.fill = initialColor;
-//     }
-// });
+/*Login script*/ 
+function login() {
+    const usernameInput = document.getElementById("username").value;
+    const passwordInput = document.getElementById("password").value;
 
-  //Development of like feature and keeping it into cookies : End
+    const index = usernames.indexOf(usernameInput);
+    if (index !== -1 && passwords[index] === passwordInput) {
+        document.getElementById("errorMessage").style.display = "flex";
+        document.getElementById("errorMessage").innerText = "Connexion réussie!";
+        window.location.href = "welcome.html";
+    } else {
+        document.getElementById("errorMessage").style.display = "flex";
+        document.getElementById("errorMessage").innerText = "Identifiants incorrects. Veuillez réessayer.";
+    }
+}
+
+
+function openModal(clickedElement) {
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("modalImage");
+  
+    modal.style.display = "flex";
+  
+    // Récupère le style de fond directement depuis le CSS de l'élément cliqué
+    const backgroundImage = getComputedStyle(clickedElement).backgroundImage;
+    modalImg.style.backgroundImage = backgroundImage;
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById("myModal");
+  
+    modal.style.display = "none";
+  }
 

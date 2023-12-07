@@ -1,0 +1,187 @@
+body {
+  overflow-y: hidden;
+  background: linear-gradient(
+    132deg,
+    rgba(173, 43, 117, 1) 28%,
+    rgba(224, 64, 92, 1) 68%,
+    rgba(242, 106, 41, 1) 100%
+  );
+}
+
+/* bubbles animation */
+/*BigOne */
+
+.bubble {
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+#bigBubble1 {
+  scale: 1.4;
+  left: 45px;
+}
+
+#bigBubble2 {
+  scale: 1.4;
+  left: 245px;
+}
+
+#bigBubble3 {
+  scale: 1.6;
+  display: none;
+  left: 836px;
+}
+
+#bigBubble4 {
+  scale: 1.3;
+  display: none;
+  left: 1310px;
+}
+
+/*medium */
+
+#Bubble1 {
+  left: 115px;
+}
+
+#Bubble2 {
+  left: 225px;
+}
+
+#Bubble3 {
+  display: none;
+  left: 656px;
+}
+
+#Bubble4 {
+  display: none;
+  left: 956px;
+}
+
+#Bubble5 {
+  display: none;
+  left: 1256px;
+}
+
+/* small one */
+
+#smallBubble1 {
+  scale: 0.5;
+  left: 88px;
+}
+
+#smallBubble2 {
+  scale: 0.4;
+  left: 188px;
+}
+
+#smallBubble3 {
+  display: none;
+  scale: 0.5;
+  left: 588px;
+}
+
+#smallBubble4 {
+  display: none;
+  scale: 0.6;
+  left: 988px;
+}
+
+#smallBubble5 {
+  display: none;
+  scale: 0.5;
+  left: 1588px;
+}
+
+/* Animation */
+
+.bubble2 {
+  position: absolute;
+  z-index: -1;
+  animation: slide-in-bottom 15s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+}
+
+.bubble1 {
+  position: absolute;
+  z-index: -1;
+  animation: slide-in-bottom 35s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+}
+
+.bubble3 {
+  position: absolute;
+  z-index: -1;
+  animation: slide-in-bottom 25s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+}
+
+.bubble4 {
+  position: absolute;
+  z-index: -1;
+  animation: slide-in-bottom 45s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+}
+
+/* Media Queries bubble */
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #smallBubble3 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #Bubble3 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #Bubble4 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #bigBubble3 {
+    display: initial;
+  }
+
+  #Bubble5 {
+    display: initial;
+  }
+
+  #smallBubble4 {
+    display: initial;
+  }
+
+  #bigBubble4 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  #smallBubble5 {
+    display: initial;
+  }
+}
+
+/* Fin bubbles animation */

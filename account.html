@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <title>Adopte Une Chaussette</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/account.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Adopte Une Chaussette</title>
   </head>
   <body>
     <header>
@@ -65,123 +69,136 @@
       </nav>
     </header>
 
+    <main class="myAccount">
+      <!-- Section images utilisateur -->
+      <section class="userPictures">
+        <img
+          src="./persons/Paul.png"
+          class="userProfilPicture"
+          alt="userProfilPicture"
+        />
+        <!-- Nom Utilisateur / Pseudo -->
+        <h1 class="userNickname">Paul</h1>
+        <div class="userGalleryPictures">
+          <div class="mypic1 myPic"></div>
+          <div class="mypic2 myPic"></div>
+          <div class="mypic3 myPic"></div>
+          <div class="mypic4 myPic"></div>
+          <div class="mypic5 myPic"></div>
+          <div class="mypic6 myPic"></div>
+        </div>
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          onchange="handleFileChange()"
+        />
+      </section>
 
+      <!-- Section comptrenant les informations du profil -->
+      <section class="userInformations glass">
+        <!-- Div pour l'identité -->
+        <div class="userIdentity">
+          <input
+            id="firstName"
+            type="text"
+            placeholder="Entrez votre nom"
+            class="glass"
+          />
+          <input
+            id="lastName"
+            type="text"
+            placeholder="Entrez votre prénom"
+            class="glass"
+          />
+        </div>
 
+        <!-- Div pour le genre -->
+        <div class="userGender">
+          <div>
+            <label for="gender">Genre</label>
+          </div>
+          <div class="genderList">
+            <label for="male">Homme</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="female">Femme</label>
+            <input type="radio" id="female" name="gender" value="female" />
+          </div>
+        </div>
 
+        <!-- Div pour l'usure -->
+        <div class="userUsed">
+          <label for="wear">Usure</label>
+          <select name="wear" id="wear" class="glass">
+            <option value="like_new">Comme neuf</option>
+            <option value="slight_wear">Peu usée</option>
+            <option value="moderate_wear">Usée</option>
+            <option value="heavy_wear">Très usée</option>
+          </select>
+        </div>
 
-  <main class="myAccount">
-    <!-- Section images utilisateur -->
-    <section class="userPictures">
-        <img src="./persons/Paul.png" class="userProfilPicture" alt="userProfilPicture">
-      <div class="userGalleryPictures">
-        <div class="mypic1"></div>
-        <div class="mypic2"></div>
-        <div class="mypic3"></div>
-        <div class="mypic4"></div>
-        <div class="mypic5"></div>
-        <div class="mypic6"></div>
-      </div>
-    </section>
+        <!-- Div pour les saisons -->
+        <div class="userSeasons">
+          <label for="season">Saison préférée</label>
+          <select name="season" id="season" class="glass">
+            <option value="summer">Été</option>
+            <option value="autumn">Automne</option>
+            <option value="winter">Hiver</option>
+            <option value="spring">Printemps</option>
+          </select>
+        </div>
 
-    <!-- Nom Utilisateur / Pseudo -->
-    <h1 class="userNickname">Paul</h1>
+        <!-- Div pour la bio -->
+        <div class="biography">
+          <label for="bio">Biographie:</label>
+          <textarea
+            id="bio"
+            placeholder="Décrivez-vous en quelques mots"
+            name="bio"
+            class="glass"
+          ></textarea>
+        </div>
+        <button class="saveUserInfo glass">Sauvegarder</button>
+      </section>
+    </main>
 
-    <!-- Section comptrenant les informations du profil -->
-    <section class="userInformations glass">
-
-      <!-- Div pour l'identité -->
-      <div class="userIdentity">
-        <input id="firstName" type="text" placeholder="Nom"/>
-        <input id="lastName" type="text" placeholder="Prénom" />
-      </div>
-
-      <!-- Div pour le genre -->
-      <div class="userGender">
-        <label for="gender">Genre</label>
-        <label for="male"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="40" viewBox="0 0 24 40" fill="none">
-          <path d="M20.4809 19.4513C18.8225 17.7873 16.7973 16.7087 14.6638 16.2237V14.0998H16.3306C16.8806 14.0998 17.3307 13.6483 17.3307 13.0964V9.75176C17.3307 9.1999 16.8806 8.74837 16.3306 8.74837H14.6638V6.67468H16.6556C17.5474 6.67468 17.9891 5.59603 17.364 4.96054L12.7053 0.294748C12.3136 -0.0982493 11.6802 -0.0982493 11.2885 0.294748L6.62974 4.96891C5.99635 5.60439 6.44639 6.68304 7.33814 6.68304H9.32998V8.74837H7.66316C7.11312 8.74837 6.66308 9.1999 6.66308 9.75176V13.0964C6.66308 13.6483 7.11312 14.0998 7.66316 14.0998H9.32998V16.2237C7.19646 16.7087 5.17128 17.7873 3.5128 19.4513C-1.17093 24.1505 -1.17093 31.7763 3.5128 36.4756C8.19654 41.1748 15.7972 41.1748 20.4809 36.4756C25.173 31.7763 25.173 24.1505 20.4809 19.4513ZM16.7139 32.6961C14.1137 35.3049 9.88836 35.3049 7.28813 32.6961C4.68791 30.0873 4.68791 25.8479 7.28813 23.2391C9.88836 20.6303 14.1137 20.6303 16.7139 23.2391C19.3142 25.8396 19.3142 30.0873 16.7139 32.6961Z" fill="white"/>
-        </svg>
-      </label>
-        <input type="radio" id="male" name="gender" value="male" />
-        <label for="female">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="40" viewBox="0 0 25 40" fill="none">
-          <path d="M25 12.8571C25 5.75893 19.401 0 12.5 0C5.59896 0 0 5.75893 0 12.8571C0 18.9732 4.15799 24.0982 9.72222 25.3929V30H6.59722C6.02431 30 5.55556 30.4821 5.55556 31.0714V34.6429C5.55556 35.2321 6.02431 35.7143 6.59722 35.7143H9.72222V38.9286C9.72222 39.5179 10.191 40 10.7639 40H14.2361C14.809 40 15.2778 39.5179 15.2778 38.9286V35.7143H18.4028C18.9757 35.7143 19.4444 35.2321 19.4444 34.6429V31.0714C19.4444 30.4821 18.9757 30 18.4028 30H15.2778V25.3929C20.842 24.0982 25 18.9732 25 12.8571ZM5.55556 12.8571C5.55556 8.91964 8.67188 5.71429 12.5 5.71429C16.3281 5.71429 19.4444 8.91964 19.4444 12.8571C19.4444 16.7946 16.3281 20 12.5 20C8.67188 20 5.55556 16.7946 5.55556 12.8571Z" fill="white" f/>
-        </svg>
-      </label>
-        <input type="radio" id="female" name="gender" value="female"/>
-      </div>
-
-
-      <!-- Div pour l'usure -->
-      <div class="userUsed">
-        <label for="wear">Usure</label>
-        <select name="wear" id="wear" class="glass">
-        <option value="like_new">Comme neuf</option>
-        <option value="slight_wear">Peu usée</option>
-        <option value="moderate_wear">Usée</option>
-        <option value="heavy_wear">Très usée</option>
-        </select>
-      </div>
-
-      <!-- Div pour les saisons -->
-      <div class="userSeasons">
-        <label for="season">Saison préférée</label>
-        <select name="season" id="season" class="glass">
-        <option value="summer">Été</option>
-        <option value="autumn">Automne</option>
-        <option value="winter">Hiver</option>
-        <option value="spring">Printemps</option>
-        </select>
-      </div>
-
-
-      <!-- Div pour la bio -->
-      <div class="biography">
-        <label for="bio">Biographie:</label>
-        <textarea id="bio" name="bio" class="glass"></textarea>
-      </div>
-      <button class="saveUserInfo glass">Sauvegarder</button>
-    </section>
-  </main>
-
-  <footer class="footerGlass">
-    <p class="copyright">&copy; Promodoro 2023</p>
-    <ul>
-      <!--Facebook-->
-      <li>
-        <a href="https://www.facebook.com">
-          <svg class="facebookIcon">
-            <path
-              d="M44 21.6308C44 9.68154 34.1532 0 22 0C9.84678 0 0 9.68154 0 21.6308C0 32.4271 8.04508 41.3759 18.5625 43V27.8837H12.9738V21.6308H18.5625V16.8651C18.5625 11.4443 21.8448 8.44998 26.8719 8.44998C29.2795 8.44998 31.7971 8.87213 31.7971 8.87213V14.1926H29.0223C26.29 14.1926 25.4375 15.8603 25.4375 17.5707V21.6308H31.539L30.5631 27.8837H25.4375V43C35.9549 41.3759 44 32.4271 44 21.6308Z"
-            />
-          </svg>
-        </a>
-      </li>
-      <!--Insta-->
-      <li>
-        <a href="https://www.instagram.com/">
-          <svg class="instagramIcon">
-            <path
-              d="M19.5043 9.50089C13.9708 9.50089 9.50747 13.9652 9.50747 19.5C9.50747 25.0348 13.9708 29.4991 19.5043 29.4991C25.0379 29.4991 29.5012 25.0348 29.5012 19.5C29.5012 13.9652 25.0379 9.50089 19.5043 9.50089ZM19.5043 26.0007C15.9284 26.0007 13.0051 23.0854 13.0051 19.5C13.0051 15.9146 15.9197 12.9993 19.5043 12.9993C23.089 12.9993 26.0036 15.9146 26.0036 19.5C26.0036 23.0854 23.0803 26.0007 19.5043 26.0007ZM32.2419 9.09188C32.2419 10.3885 31.1978 11.4241 29.9102 11.4241C28.6138 11.4241 27.5784 10.3798 27.5784 9.09188C27.5784 7.80392 28.6225 6.75962 29.9102 6.75962C31.1978 6.75962 32.2419 7.80392 32.2419 9.09188ZM38.863 11.4589C38.7151 8.33477 38.0016 5.56739 35.7134 3.28735C33.4338 1.00731 30.6671 0.293707 27.5436 0.137063C24.3244 -0.0456878 14.6756 -0.0456878 11.4564 0.137063C8.34161 0.285005 5.57485 0.998605 3.28661 3.27865C0.998383 5.55869 0.293642 8.32606 0.137033 11.4502C-0.0456776 14.6701 -0.0456776 24.3212 0.137033 27.5411C0.284941 30.6652 0.998383 33.4326 3.28661 35.7127C5.57485 37.9927 8.33291 38.7063 11.4564 38.8629C14.6756 39.0457 24.3244 39.0457 27.5436 38.8629C30.6671 38.715 33.4338 38.0014 35.7134 35.7127C37.9929 33.4326 38.7064 30.6652 38.863 27.5411C39.0457 24.3212 39.0457 14.6788 38.863 11.4589ZM34.7041 30.9959C34.0255 32.7016 32.7117 34.0157 30.9977 34.7032C28.4311 35.7214 22.3407 35.4864 19.5043 35.4864C16.668 35.4864 10.5689 35.7127 8.01099 34.7032C6.30569 34.0244 4.99191 32.7103 4.30457 30.9959C3.28661 28.4287 3.52153 22.337 3.52153 19.5C3.52153 16.663 3.29532 10.5626 4.30457 8.00407C4.98321 6.29839 6.29699 4.98432 8.01099 4.29683C10.5776 3.27865 16.668 3.51361 19.5043 3.51361C22.3407 3.51361 28.4398 3.28735 30.9977 4.29683C32.703 4.97562 34.0168 6.28969 34.7041 8.00407C35.7221 10.5713 35.4872 16.663 35.4872 19.5C35.4872 22.337 35.7221 28.4374 34.7041 30.9959Z"
-            />
-          </svg>
-        </a>
-      </li>
-      <!--Twitter-->
-      <li>
-        <a href="https://twitter.com/">
-          <svg class="twitterIcon">
-            <path
-              d=" M29.1369 0H34.8131L22.4155 15.2481L37 36H25.5832L16.6347 23.4173L6.40787 36H0.723598L13.9815
+    <footer class="footerGlass">
+      <p class="copyright">&copy; Promodoro 2023</p>
+      <ul>
+        <!--Facebook-->
+        <li>
+          <a href="https://www.facebook.com">
+            <svg class="facebookIcon">
+              <path
+                d="M44 21.6308C44 9.68154 34.1532 0 22 0C9.84678 0 0 9.68154 0 21.6308C0 32.4271 8.04508 41.3759 18.5625 43V27.8837H12.9738V21.6308H18.5625V16.8651C18.5625 11.4443 21.8448 8.44998 26.8719 8.44998C29.2795 8.44998 31.7971 8.87213 31.7971 8.87213V14.1926H29.0223C26.29 14.1926 25.4375 15.8603 25.4375 17.5707V21.6308H31.539L30.5631 27.8837H25.4375V43C35.9549 41.3759 44 32.4271 44 21.6308Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <!--Insta-->
+        <li>
+          <a href="https://www.instagram.com/">
+            <svg class="instagramIcon">
+              <path
+                d="M19.5043 9.50089C13.9708 9.50089 9.50747 13.9652 9.50747 19.5C9.50747 25.0348 13.9708 29.4991 19.5043 29.4991C25.0379 29.4991 29.5012 25.0348 29.5012 19.5C29.5012 13.9652 25.0379 9.50089 19.5043 9.50089ZM19.5043 26.0007C15.9284 26.0007 13.0051 23.0854 13.0051 19.5C13.0051 15.9146 15.9197 12.9993 19.5043 12.9993C23.089 12.9993 26.0036 15.9146 26.0036 19.5C26.0036 23.0854 23.0803 26.0007 19.5043 26.0007ZM32.2419 9.09188C32.2419 10.3885 31.1978 11.4241 29.9102 11.4241C28.6138 11.4241 27.5784 10.3798 27.5784 9.09188C27.5784 7.80392 28.6225 6.75962 29.9102 6.75962C31.1978 6.75962 32.2419 7.80392 32.2419 9.09188ZM38.863 11.4589C38.7151 8.33477 38.0016 5.56739 35.7134 3.28735C33.4338 1.00731 30.6671 0.293707 27.5436 0.137063C24.3244 -0.0456878 14.6756 -0.0456878 11.4564 0.137063C8.34161 0.285005 5.57485 0.998605 3.28661 3.27865C0.998383 5.55869 0.293642 8.32606 0.137033 11.4502C-0.0456776 14.6701 -0.0456776 24.3212 0.137033 27.5411C0.284941 30.6652 0.998383 33.4326 3.28661 35.7127C5.57485 37.9927 8.33291 38.7063 11.4564 38.8629C14.6756 39.0457 24.3244 39.0457 27.5436 38.8629C30.6671 38.715 33.4338 38.0014 35.7134 35.7127C37.9929 33.4326 38.7064 30.6652 38.863 27.5411C39.0457 24.3212 39.0457 14.6788 38.863 11.4589ZM34.7041 30.9959C34.0255 32.7016 32.7117 34.0157 30.9977 34.7032C28.4311 35.7214 22.3407 35.4864 19.5043 35.4864C16.668 35.4864 10.5689 35.7127 8.01099 34.7032C6.30569 34.0244 4.99191 32.7103 4.30457 30.9959C3.28661 28.4287 3.52153 22.337 3.52153 19.5C3.52153 16.663 3.29532 10.5626 4.30457 8.00407C4.98321 6.29839 6.29699 4.98432 8.01099 4.29683C10.5776 3.27865 16.668 3.51361 19.5043 3.51361C22.3407 3.51361 28.4398 3.28735 30.9977 4.29683C32.703 4.97562 34.0168 6.28969 34.7041 8.00407C35.7221 10.5713 35.4872 16.663 35.4872 19.5C35.4872 22.337 35.7221 28.4374 34.7041 30.9959Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <!--Twitter-->
+        <li>
+          <a href="https://twitter.com/">
+            <svg class="twitterIcon">
+              <path
+                d=" M29.1369 0H34.8131L22.4155 15.2481L37 36H25.5832L16.6347 23.4173L6.40787 36H0.723598L13.9815
           19.6875L0 0H11.7062L19.7864 11.501L29.1369 0ZM27.143 32.3481H30.2866L9.9937 3.46154H6.61691L27.143
           32.3481Z"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
