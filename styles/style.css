@@ -371,7 +371,7 @@ ul {
 }
 
 li {
-  width: 50px;
+  width: 80px;
 }
 
 .indexLogo {
@@ -805,10 +805,10 @@ p {
 }
 
 .footerNoCopyright svg {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   fill: #fff;
-  margin: 0 10px;
+  margin: 0 10px 0 25px;
 }
 
 /* support.css */
@@ -816,10 +816,6 @@ p {
 ul {
   display: flex;
   flex-direction: row;
-}
-
-li {
-  width: 50px;
 }
 
 .indexLogo {
@@ -1126,6 +1122,7 @@ aside img {
   align-items: center;
   justify-content: center;
 }
+
 .carousel-container .fa-angle-left,
 .fa-angle-right {
   height: 30px;
@@ -1142,12 +1139,18 @@ aside img {
   transform: translateY(-50%); */
 /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); */
 /* }
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .carousel-container .fa-angle-left {
   left: -50px;
 }
+
 .carousel-container .fa-angle-right {
   right: -40px;
 }
+
 .carousel-container .carousel {
   height: 400px;
   width: 100%;
@@ -1161,11 +1164,13 @@ aside img {
   scroll-behavior: smooth;
   padding: 0;
 }
+
 .carousel :where(.card, .card-image, .card-info, .person-info) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .carousel .card {
   height: 350px;
   width: 90%;
@@ -1179,12 +1184,15 @@ aside img {
   flex-direction: column;
   cursor: pointer;
 }
+
 .carousel.no-transition {
   scroll-behavior: auto;
 }
+
 li.card:hover {
   transform: scale(1.05);
 }
+
 .card .card-image img {
   width: 140px;
   height: 140px;
@@ -1197,11 +1205,12 @@ li.card:hover {
   margin-bottom: 0;
 }
 
-.card-info > h2 {
+.card-info>h2 {
   margin-right: 1rem;
   font-family: var(--mainFont);
   font-size: var(--headTwoIpad);
 }
+
 .carousel a {
   min-width: 80%;
   display: flex;
@@ -1209,6 +1218,7 @@ li.card:hover {
   align-items: center;
   justify-content: center;
 }
+
 .person-info p {
   color: var(--colorText);
   font-size: calc(var(--textDefault) / 1.05);
@@ -1232,6 +1242,12 @@ li.card:hover {
     text-align: center;
     font-size: 2rem;
   }
+.fa-chevron-up,
+.fa-chevron-down {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
   .carousel-container .carousel {
     grid-auto-columns: calc((95% / 2) - 0.75rem);
   }
@@ -1242,6 +1258,7 @@ li.card:hover {
     gap: 2rem;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 600px) {
   .carousel-container {
     width: 280px;
@@ -1251,6 +1268,7 @@ li.card:hover {
     position: relative;
     top: 0;
   }
+
   .carousel-container .carousel {
     height: 100%;
     margin: 0;
@@ -1267,8 +1285,15 @@ li.card:hover {
     justify-content: center;
     flex-shrink: 0;
   }
+
   .carousel-container .fa-angle-left,
   .fa-angle-right {
+    display: none;
+  }
+
+  .carousel-container .fa-chevron-up,
+  .fa-chevron-down {
+    display: unset;
     height: 30px;
     width: 30px; */
 /* background-color: rgba(245, 245, 245, 0.445);
