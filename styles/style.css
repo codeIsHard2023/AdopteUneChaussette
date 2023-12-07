@@ -806,7 +806,7 @@ main {
   border-radius: 100%;
   border: 2px solid white;
   margin: 2rem;
-  height: 10vw;
+  height: 10rem;
 }
 
 .userGalleryPictures {
@@ -938,6 +938,8 @@ p {
 		height: 10rem;
 		width: 15rem;
 	}
+
+  .userpictures img
 
 	.pic1 {
     background-color: red;
